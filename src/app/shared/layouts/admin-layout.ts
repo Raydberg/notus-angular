@@ -1,0 +1,24 @@
+import { Component, OnInit } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+  imports: [RouterOutlet],
+  selector: 'admin-layout',
+  template: `
+    <div>
+      <!-- <app-sidebar></app-sidebar> -->
+      <div class="relative md:ml-64 bg-blueGray-100">
+        <!-- <app-admin-navbar></app-admin-navbar> -->
+        <!-- <app-header-stats></app-header-stats> -->
+        <div class="px-4 md:px-10 mx-auto w-full -m-24">
+          <router-outlet></router-outlet>
+          <!-- <app-footer-admin></app-footer-admin> -->
+        </div>
+      </div>
+    </div>
+  `
+})
+
+export class AdminLayout implements OnInit {
+  ngOnInit() { }
+}
