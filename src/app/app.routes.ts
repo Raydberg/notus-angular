@@ -11,11 +11,11 @@ export const routes: Routes = [
   //Admin
   {
     path: 'admin',
-    component:AdminLayout,
+    component: AdminLayout,
     children: [
       { path: "dashboard", loadComponent: () => import('./modules/admin/dashboard/dashboard') },
-      // { path: "settings" },
-      // { path: "tables" },
+      { path: "settings", loadComponent: () => import("./modules/admin/settings/settings") },
+      { path: "tables", loadComponent: () => import("./modules/admin/tables-custom/tables-custom") },
       // { path: "maps" },
       { path: "", redirectTo: 'dashboard', pathMatch: 'full' },
     ]
