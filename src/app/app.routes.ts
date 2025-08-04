@@ -5,6 +5,7 @@ import { Register } from './modules/auth/register/register';
 import { Profile } from './modules/profile/profile';
 import { Landing } from './modules/landing/landing';
 import { AdminLayout } from './shared/layouts/admin-layout';
+import { Home } from './modules/home/home';
 
 export const routes: Routes = [
 
@@ -33,6 +34,6 @@ export const routes: Routes = [
   //Others
   { path: 'profile', component: Profile },
   { path: 'landing', component: Landing },
-  // { path: '' },
+  { path: '',component:Home },
   // { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
