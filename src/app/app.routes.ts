@@ -4,20 +4,22 @@ import { Login } from './modules/auth/login/login';
 import { Register } from './modules/auth/register/register';
 import { Profile } from './modules/profile/profile';
 import { Landing } from './modules/landing/landing';
+import { AdminLayout } from './shared/layouts/admin-layout';
 
 export const routes: Routes = [
 
   //Admin
-  // {
-  //   path: 'admin',
-  //   children: [
-  //     { path: "dashboard" },
-  //     { path: "settings" },
-  //     { path: "tables" },
-  //     { path: "maps" },
-  //     { path: "", redirectTo: 'dashboard', pathMatch: 'full' },
-  //   ]
-  // },
+  {
+    path: 'admin',
+    component:AdminLayout,
+    children: [
+      { path: "dashboard", loadComponent: () => import('./modules/admin/dashboard/dashboard') },
+      // { path: "settings" },
+      // { path: "tables" },
+      // { path: "maps" },
+      { path: "", redirectTo: 'dashboard', pathMatch: 'full' },
+    ]
+  },
   //Auth
   {
     path: 'auth',
