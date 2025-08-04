@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import { AuthLayout } from './shared/layouts/auth-layout';
-import { Login } from './modules/auth/login';
+import { Login } from './modules/auth/login/login';
+import { Register } from './modules/auth/register/register';
+import { Profile } from './modules/profile/profile';
 
 export const routes: Routes = [
 
@@ -21,12 +23,12 @@ export const routes: Routes = [
     component: AuthLayout,
     children: [
       { path: "login", component: Login },
-      // { path: "register" },
+      { path: "register", component: Register },
       { path: "", redirectTo: 'login', pathMatch: 'full' },
     ]
   },
   //Others
-  // { path: 'profile' },
+  { path: 'profile', component: Profile },
   // { path: 'landing' },
   // { path: '' },
   // { path: '**', redirectTo: '', pathMatch: 'full' },

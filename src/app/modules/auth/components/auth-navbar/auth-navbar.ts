@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: 'auth-navbar.html'
 })
 
-export class AuthNavbarComponent implements OnInit {
+export class AuthNavbar implements OnInit {
   navbarOpen = false;
 
   constructor() { }

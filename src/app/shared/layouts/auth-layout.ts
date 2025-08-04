@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { AuthNavbarComponent } from "../../modules/auth/components/auth-navbar/auth-navbar";
+import { AuthNavbar } from "../../modules/auth/components/auth-navbar/auth-navbar";
+import { FooterSmall } from "../../modules/auth/components/footer-small/footer-smal";
 @Component({
   selector: 'auth-layout',
-  imports: [RouterOutlet, AuthNavbarComponent],
+  imports: [RouterOutlet, AuthNavbar, FooterSmall],
   template: `
   <div class="">
   <auth-navbar/>
@@ -14,7 +15,7 @@ import { AuthNavbarComponent } from "../../modules/auth/components/auth-navbar/a
         style="background-image: url('assets/img/register_bg_2.png')"
       ></div>
       <router-outlet/>
-      <!-- <app-footer-small [absolute]="true"></app-footer-small> -->
+      <footer-small [absolute]="true"/>
     </section>
   </main>
 </div>
