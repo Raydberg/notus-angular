@@ -9,7 +9,7 @@ import { NavbarCustom } from "../../shared/components/navbar-custom/navbar-custo
   templateUrl: 'home.html'
 })
 
-export class Home implements OnInit {
+export default class Home implements OnInit {
   constructor() { }
 
   ngOnInit() { }

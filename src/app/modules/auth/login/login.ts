@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: 'login.html'
 })
 
-export class Login implements OnInit {
+export  default class Login implements OnInit {
   constructor() { }
 
   ngOnInit() { }

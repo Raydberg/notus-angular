@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: 'landing.html'
 })
 
-export class Landing implements OnInit {
+export default class Landing implements OnInit {
   constructor() { }
 
   ngOnInit() { }

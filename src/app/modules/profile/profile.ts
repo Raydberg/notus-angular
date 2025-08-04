@@ -9,7 +9,7 @@ import { FooterProfile } from '../../shared/components/footer-profile';
   templateUrl: 'profile.html'
 })
 
-export class Profile implements OnInit {
+export default class Profile implements OnInit {
   constructor() { }
 
   ngOnInit() { }

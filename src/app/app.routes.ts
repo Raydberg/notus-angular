@@ -1,11 +1,7 @@
 import { Routes } from '@angular/router';
 import { AuthLayout } from './shared/layouts/auth-layout';
-import { Login } from './modules/auth/login/login';
-import { Register } from './modules/auth/register/register';
-import { Profile } from './modules/profile/profile';
-import { Landing } from './modules/landing/landing';
 import { AdminLayout } from './shared/layouts/admin-layout';
-import { Home } from './modules/home/home';
+
 
 export const routes: Routes = [
 
@@ -17,7 +13,6 @@ export const routes: Routes = [
       { path: "dashboard", loadComponent: () => import('./modules/admin/dashboard/dashboard') },
       { path: "settings", loadComponent: () => import("./modules/admin/settings/settings") },
       { path: "tables", loadComponent: () => import("./modules/admin/tables-custom/tables-custom") },
-      // { path: "maps" },
       { path: "", redirectTo: 'dashboard', pathMatch: 'full' },
     ]
   },
@@ -26,14 +21,14 @@ export const routes: Routes = [
     path: 'auth',
     component: AuthLayout,
     children: [
-      { path: "login", component: Login },
-      { path: "register", component: Register },
+      { path: "login", loadComponent: () => import("./modules/auth/login/login") },
+      { path: "register", loadComponent: () => import("./modules/auth/register/register") },
       { path: "", redirectTo: 'login', pathMatch: 'full' },
     ]
   },
   //Others
-  { path: 'profile', component: Profile },
-  { path: 'landing', component: Landing },
-  { path: '',component:Home },
-  // { path: '**', redirectTo: '', pathMatch: 'full' },
+  { path: 'profile', loadComponent: () => import("./modules/profile/profile") },
+  { path: 'landing', loadComponent: () => import("./modules/landing/landing") },
+  { path: '', loadComponent: () => import("./modules/home/home") },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
