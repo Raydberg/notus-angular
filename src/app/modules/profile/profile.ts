@@ -4,7 +4,6 @@ import { FooterProfile } from '../../shared/components/footer-profile';
 
 
 @Component({
-  standalone: true,
   imports: [AuthNavbar,FooterProfile],
   selector: 'profile',
   templateUrl: 'profile.html'

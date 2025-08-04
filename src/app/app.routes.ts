@@ -3,6 +3,7 @@ import { AuthLayout } from './shared/layouts/auth-layout';
 import { Login } from './modules/auth/login/login';
 import { Register } from './modules/auth/register/register';
 import { Profile } from './modules/profile/profile';
+import { Landing } from './modules/landing/landing';
 
 export const routes: Routes = [
 
@@ -29,7 +30,7 @@ export const routes: Routes = [
   },
   //Others
   { path: 'profile', component: Profile },
-  // { path: 'landing' },
+  { path: 'landing', component: Landing },
   // { path: '' },
   // { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
